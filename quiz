@@ -43,7 +43,7 @@ class Button:
         return self.rect.collidepoint(pos)
 
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-pygame.display.set_caption('Quiz Game')
+pygame.display.set_caption('QuizMaster')
 
 def load_quiz(filename):
     with open(filename, 'r') as file:
@@ -125,13 +125,13 @@ def quiz_game(questionList, titleofquiz):
             display_message(f"Question {questionIndex + 1} out of {totalQuestions} : {currentQuestion.question}", QUESTION_OFFSET)
 
             for button in buttons:
-                button.draw(screen, BUTTON_COLOUR if user_answer is None else BACKGROUND_COLOUR)
+                button.draw(screen, BACKGROUND_COLOUR if user_answer is None else BACKGROUND_COLOUR)
                 
             button_go_back = Button("Go back", (SCREEN_WIDTH // 2+350 , SCREEN_HEIGHT // 2+250), 250, 40)
             button_leave = Button("Quit", (SCREEN_WIDTH // 2+350 , SCREEN_HEIGHT // 2+300), 250, 40)
             display_message(f"Time remaining: {time_remaining}", SCREEN_HEIGHT - QUESTION_OFFSET)
-            button_go_back.draw(screen, BUTTON_COLOUR)
-            button_leave.draw(screen, BUTTON_COLOUR)
+            button_go_back.draw(screen, BACKGROUND_COLOUR)
+            button_leave.draw(screen, BACKGROUND_COLOUR)
             pygame.display.update()
 
             for event in pygame.event.get():
@@ -174,9 +174,9 @@ def quiz_game(questionList, titleofquiz):
         button_open_file = Button("Play another quiz", (SCREEN_WIDTH // 2 - 150, SCREEN_HEIGHT // 2 + 50), 250, 40)
         button_quit = Button("Quit", (SCREEN_WIDTH // 2 - 150, SCREEN_HEIGHT // 2 + 100), 250, 40)
 
-        button_show_incorrect.draw(screen, BUTTON_COLOUR)
-        button_open_file.draw(screen, BUTTON_COLOUR)
-        button_quit.draw(screen, BUTTON_COLOUR)
+        button_show_incorrect.draw(screen, BACKGROUND_COLOUR)
+        button_open_file.draw(screen, BACKGROUND_COLOUR)
+        button_quit.draw(screen, BACKGROUND_COLOUR)
         
         pygame.display.update()
 
@@ -201,7 +201,7 @@ def quiz_game(questionList, titleofquiz):
 def main():
     running = True
     while running:
-        filename = sg.popup_get_file("Please select a quiz:", button_color="blue", initial_folder="quizzes",
+        filename = sg.popup_get_file("Please select a quiz:",initial_folder="quizzes",
                                      no_window=True, file_types=(('Quiz files', '.json'),))
         if not filename:
             break
