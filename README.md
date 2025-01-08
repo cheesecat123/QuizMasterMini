@@ -6,19 +6,19 @@ This code is a smaller version of [QuizMaster](https://github.com/hermonochy/Qui
 
 ### Install
 1. Clone this repository `git clone https://github.com/hermonochy/QuizMasterMini.git`
-2. Set up a new virtual environment `python3 -m venv .`(This will take up about 60 mega byte, but is recommended).
+2. Set up a new virtual environment `python3 -m venv .`
 3. Start the environment.`source ./bin/activate`
 4. Install packages in `requirements.txt`.`pip3 install -r requirements.txt`
 5. Run either Quiz Creator or Quiz Game (see below).
 
-### Quiz Creator
+### Running QuizMasterMini
 
-1. Run the script `./quizcreator` 
-2. Use it to manage and create quiz questions.The add button you can add questions. As it is multiple choice, you need to give a correct awnser and wrong awnsers, seperating them with commas.Afterwards, save it. Format is json.
+In a command line window, enter `./quiz`.
 
-### Quiz Game
+## Quiz Game
 
-In a command line window, enter `./quiz`. Choose a json file and play.You can either press the number given to the awnser or, if you don't have a keyboard, click on the awnser. Remember, you only have 10 seconds! At the end it will tell you your score.
+Click `Play a Quiz`. Choose a json file and play by simply clicking on the answer and `Next`. At the end it will tell you your score.
 
+## Quiz Creator
 
-
+Click `Make a Quiz`. Choose a json file to edit or start making your own. 
