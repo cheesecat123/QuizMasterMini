@@ -1,6 +1,6 @@
 # QuizMasterMini
 
-This code is a smaller version of [QuizMaster](https://github.com/hermonochy/QuizMaster) for devices with less storage.
+This code is a smaller version of [QuizMaster](https://github.com/hermonochy/QuizMaster) for devices with less storage. No external requirements are needed.
 
 ## How to Use
 
@@ -11,7 +11,7 @@ This code is a smaller version of [QuizMaster](https://github.com/hermonochy/Qui
 
 ### Running QuizMasterMini
 
-In a command line window, enter `./quiz`.
+In a command line window, enter `./quiz` for Linux, `python quiz` for windows.
 
 ## Quiz Game
 
