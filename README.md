@@ -6,10 +6,8 @@ This code is a smaller version of [QuizMaster](https://github.com/hermonochy/Qui
 
 ### Install
 1. Clone this repository `git clone https://github.com/hermonochy/QuizMasterMini.git`
-2. Set up a new virtual environment `python3 -m venv .`
-3. Start the environment.`source ./bin/activate`
-4. Install packages in `requirements.txt`.`pip3 install -r requirements.txt`
-5. Run either Quiz Creator or Quiz Game (see below).
+2. Enter the directory containing the game executable: `cd QuizMasterMini`
+3. Run either Quiz Creator or Quiz Game (see below).
 
 ### Running QuizMasterMini
 
